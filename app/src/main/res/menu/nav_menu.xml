@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_lyom"
+        android:icon="@drawable/ic_baseline_list_alt"
+        android:title="@string/today" />
+    <item
+        android:id="@+id/nav_trend"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_trending_up"
+        android:title="@string/trend" />
+    <item
+        android:id="@+id/nav_notifications"
+        android:icon="@drawable/ic_baseline_notifications_active"
+        android:title="@string/notifications" />
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/ic_baseline_person"
+        android:title="@string/account" />
+</menu>

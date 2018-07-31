@@ -8,4 +8,36 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- No title no action bar application theme. -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- No title no action bar application theme. -->
+    <style name="AppTheme.Home" parent="AppTheme.NoActionBar">
+        <item name="android:background">#fafafa</item>
+    </style>
+
+    <!-- Primary button theme. -->
+    <style name="PrimaryButton" parent="AppTheme">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <!-- White button theme. -->
+    <style name="WhiteButton" parent="AppTheme">
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- Facebook button theme. -->
+    <style name="FacebookButton" parent="AppTheme">
+        <item name="colorButtonNormal">@color/colorFacebook</item>
+        <item name="colorControlHighlight">@color/colorFacebookDark</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
