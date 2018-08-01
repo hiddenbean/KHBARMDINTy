@@ -3,6 +3,7 @@ package com.hiddenbean.andoid.khbarmdinty;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -39,10 +40,29 @@ import static android.Manifest.permission.READ_CONTACTS;
  */
 public class LoginActivity extends AppCompatActivity{
 
+    EditText mLogin, mPassword;
+    Button mLoginButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mLogin = (EditText) findViewById(R.id.login_field);
+        mPassword = (EditText) findViewById(R.id.password_field);
+        mLoginButton = (Button) findViewById(R.id.login_button);
+
+        mLoginButton.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mLogin.getText().toString().equals("admin") && mPassword.getText().toString().equals("admin")) {
+                    Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                }
+            }
+        });
+
     }
 }
 
