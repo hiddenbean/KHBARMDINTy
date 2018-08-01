@@ -8,15 +8,24 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="AppTheme.Khbar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@android:color/darker_gray</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:navigationBarColor">@android:color/white</item>
+    </style>
+
     <!-- No title no action bar application theme. -->
     <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorControlHighlight">@color/colorAccentLight</item>
     </style>
 
     <!-- No title no action bar application theme. -->
     <style name="AppTheme.Home" parent="AppTheme.NoActionBar">
         <item name="android:background">#fafafa</item>
+        <item name="colorControlHighlight">@color/colorAccentLight</item>
     </style>
 
     <!-- Primary button theme. -->

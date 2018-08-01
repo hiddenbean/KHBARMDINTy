@@ -13,11 +13,9 @@ import android.widget.FrameLayout;
 public class HomeActivity extends AppCompatActivity {
 
     private BottomNavigationView mMainNav;
-    private FrameLayout mMainFrame;
     private LyomFragment lyomFragment;
     private TrendFragment trendFragment;
     private NotificationsFragment notificationsFragment;
-    private AccountFragment accountFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +23,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
-        mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
         lyomFragment = new LyomFragment();
         trendFragment = new TrendFragment();
         notificationsFragment = new NotificationsFragment();
-        accountFragment = new AccountFragment();
 
         setFragment(lyomFragment);
 
@@ -47,10 +43,6 @@ public class HomeActivity extends AppCompatActivity {
 
                     case R.id.nav_notifications :
                         setFragment(notificationsFragment);
-                        return true;
-
-                    case R.id.nav_account :
-                        setFragment(accountFragment);
                         return true;
 
                     default:

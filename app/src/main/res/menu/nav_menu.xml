@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/nav_lyom"
-        android:icon="@drawable/ic_baseline_list_alt"
+        android:icon="@drawable/ic_baseline_event"
         android:title="@string/today" />
     <item
         android:id="@+id/nav_trend"
@@ -15,8 +15,4 @@
         android:id="@+id/nav_notifications"
         android:icon="@drawable/ic_baseline_notifications_active"
         android:title="@string/notifications" />
-    <item
-        android:id="@+id/nav_account"
-        android:icon="@drawable/ic_baseline_person"
-        android:title="@string/account" />
 </menu>
