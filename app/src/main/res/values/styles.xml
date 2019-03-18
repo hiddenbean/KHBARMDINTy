@@ -1,11 +1,48 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="KhbarMdintyTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:fontFamily">@font/work_sans</item>
+        <item name="android:background">@null</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="WelcomeTheme" parent="KhbarMdintyTheme">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="BoxedTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    </style>
+
+    <style name="LoadScreenTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:background">@drawable/load_screen_gradient</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+    </style>
+
+    <style name="LoginTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+        <item name="android:background">@drawable/login_white_screen</item>
+    </style>
+    
+    <style name="SingingTheme">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingEnd">25dp</item>
+    </style>
+
+    <style name="MyTheme.ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
 </resources>

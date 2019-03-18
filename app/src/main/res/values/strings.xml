@@ -1,16 +1,14 @@
 <resources>
-    <string name="app_name">KHBAR MDINTy</string>
-
-    <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
-    </string>
+    <string name="app_name">Khbar Mdinty</string>
+    <string name="argument">en vous inscrivant, vous acceptez <font color="000000"><u>nos conditions \n d’utilisation</u></font> et notre <font color="000000"><u>politique de confidentialité</u></font>.</string>
+    <string name="login_title">Authentification</string>
+    <string name="singup_title">Inscription</string>
+    <string name="password_recovery_title">Problème d’authentication</string>
+    <string name="password_recovery_headline">Récupération de compte </string>
+    <string name="password_recovery_text">Vous pouvez récupérer votre compte Khbar Mdinty par entrer votre Email, Nom d’utilisateur ou numero de téléphone.</string>
+    <string name="welcome_1_headline">Que se passe-t-il autour de vous ?</string>
+    <string name="welcome_1_text">Soyez le premier à le savoir !</string>
+    <string name="welcome_2_headline">C’est vous</string>
+    <string name="welcome_2_text">Vous contrôlez votre contenu</string>
+    <string name="home_title">Htary</string>
 </resources>
