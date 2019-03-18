@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:shape="rectangle">
+
+            <gradient
+                android:startColor="@color/design_default_color_primary"
+                android:centerColor="#159EFE"
+                android:endColor="#21F8E8"
+                android:angle="45"/>
+        </shape>
+    </item>
+    <item
+        android:width="212dp"
+        android:height="75dp"
+        android:bottom="50dp"
+        android:gravity="center"
+        android:drawable="@drawable/ic_htary_white"/>
+
+    <item android:height="50dp"
+        android:gravity="bottom"
+        android:drawable="@drawable/ic_bottom_color">
+    </item>
+</layer-list>
