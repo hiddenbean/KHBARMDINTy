@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Email, Nom d'utilisateur ou téléphone"
+                android:hint="Email ou téléphone"
                 app:layout_constraintTop_toBottomOf="@id/text_separator">
 
                 <com.google.android.material.textfield.TextInputEditText

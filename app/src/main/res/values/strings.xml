@@ -11,4 +11,5 @@
     <string name="welcome_2_headline">C’est vous</string>
     <string name="welcome_2_text">Vous contrôlez votre contenu</string>
     <string name="home_title">Htary</string>
+    <string name="password_wrong"><h6 color="000000">Wrong password</h6></string>
 </resources>
