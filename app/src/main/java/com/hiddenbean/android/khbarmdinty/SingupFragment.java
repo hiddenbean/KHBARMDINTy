@@ -1,11 +1,16 @@
 package com.hiddenbean.android.khbarmdinty;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -13,6 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import com.hiddenbean.android.khbarmdinty.interfaces.Auth.RegisterUserInterface;
 import com.hiddenbean.android.khbarmdinty.models.User;
 import com.hiddenbean.android.khbarmdinty.providers.RetrofitServiceProvider;
+import com.hiddenbean.android.khbarmdinty.resources.UserResource;
 
 import org.json.JSONObject;
 
@@ -27,6 +33,8 @@ public class SingupFragment extends Fragment {
     Button singupButton, facebookButton;
     TextInputEditText first_name, last_name, login, password;
     TextInputLayout first_name_layout, last_name_layout, login_layout, password_layout;
+    ProgressBar progress_bar;
+    LinearLayout layout_semi_transparent;
 
     @Nullable
     @Override
@@ -51,6 +59,9 @@ public class SingupFragment extends Fragment {
         last_name_layout = view.findViewById(R.id.last_name_layout);
         login_layout = view.findViewById(R.id.login_layout);
         password_layout = view.findViewById(R.id.password_layout);
+        progress_bar = getActivity().findViewById(R.id.progress_bar);
+        layout_semi_transparent = view.findViewById(R.id.layout_semi_transparent);
+
 
         //Retrofit boot
         final RegisterUserInterface registerUserInterface = RetrofitServiceProvider.RETROFIT.create(RegisterUserInterface.class);
@@ -59,19 +70,38 @@ public class SingupFragment extends Fragment {
         singupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Call<User> call = registerUserInterface.registerUser(first_name.getText().toString(), last_name.getText().toString(), login.getText().toString(), password.getText().toString());
-                call.enqueue(new Callback<User>() {
+                progress_bar.setVisibility(View.VISIBLE);
+                layout_semi_transparent.setVisibility(View.VISIBLE);
+
+                getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE, WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+
+                Call<UserResource> call = registerUserInterface.registerUser(first_name.getText().toString(), last_name.getText().toString(), login.getText().toString(), password.getText().toString());
+                call.enqueue(new Callback<UserResource>() {
                     @Override
-                    public void onResponse(Call<User> call, Response<User> response) {
+                    public void onResponse(Call<UserResource> call, Response<UserResource> response) {
 
                         switch (response.code())
                         {
                             case 201 :
-                                User user = response.body();
+                                UserResource userResource  = response.body();
+                                User user = userResource.getData();
+                                SharedPreferences sharedPref = getActivity().getSharedPreferences("GlobalPrefrences", Context.MODE_PRIVATE);
+                                SharedPreferences.Editor editor = sharedPref.edit();
+                                editor.putString("user_email", user.getEmail());
+                                editor.putString("user_first_name", user.getFirst_name());
+                                editor.putString("user_last_name", user.getLast_name());
+                                editor.putString("user_api_token", user.getApi_token());
+                                editor.apply();
+
                                 Intent intent = new Intent(getContext(), MainActivity.class);
                                 startActivity(intent);
                                 break;
                             case 422 :
+                                progress_bar.setVisibility(View.INVISIBLE);
+                                layout_semi_transparent.setVisibility(View.GONE);
+
+                                getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+
                                 try {
                                     JSONObject jObjError = new JSONObject(response.errorBody().string());
                                     //First name validation messages
@@ -110,8 +140,13 @@ public class SingupFragment extends Fragment {
                     }
 
                     @Override
-                    public void onFailure(Call<User> call, Throwable t) {
-                        Toast.makeText(getContext(), "Error : " + t.getMessage(), Toast.LENGTH_LONG).show();
+                    public void onFailure(Call<UserResource> call, Throwable t) {
+                        progress_bar.setVisibility(View.INVISIBLE);
+                        layout_semi_transparent.setVisibility(View.GONE);
+
+                        getActivity().getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+
+                        Toast.makeText(getContext(), "Problème de connexion", Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -120,7 +155,7 @@ public class SingupFragment extends Fragment {
         facebookButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "veuillez réessayer ultérieurement", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Problème de connexion", Toast.LENGTH_LONG).show();
             }
         });
 

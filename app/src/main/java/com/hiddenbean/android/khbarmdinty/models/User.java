@@ -1,13 +1,15 @@
 package com.hiddenbean.android.khbarmdinty.models;
 
+import com.orm.SugarRecord;
+
 import java.util.Date;
 
-public class User{
+public class User extends SugarRecord {
 
-    private Integer id;
     private String first_name;
     private String last_name;
     private String email;
+    private Date email_verified_at;
     private String api_token;
     private Date created_at;
     private Date updated_at;
@@ -16,11 +18,11 @@ public class User{
 
     }
 
-    public User(Integer id, String first_name, String last_name, String email, String api_token, Date created_at, Date updated_at) {
-        this.id = id;
+    public User(String first_name, String last_name, String email, Date email_verified_at, String api_token, Date created_at, Date updated_at) {
         this.first_name = first_name;
         this.last_name = last_name;
         this.email = email;
+        this.email_verified_at = email_verified_at;
         this.api_token = api_token;
         this.created_at = created_at;
         this.updated_at = updated_at;
@@ -50,12 +52,12 @@ public class User{
         this.email = email;
     }
 
-    public Integer getId() {
-        return id;
+    public Date getEmail_verified_at() {
+        return email_verified_at;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setEmail_verified_at(Date email_verified_at) {
+        this.email_verified_at = email_verified_at;
     }
 
     public String getApi_token() {

@@ -3,18 +3,45 @@
     package="com.hiddenbean.android.khbarmdinty">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:usesCleartextTraffic="true"
+        android:name="com.orm.SugarApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/LoadScreenTheme">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".WelcomeActivity" />
-        <activity android:name=".FrontActivity">
+        android:theme="@style/LoadScreenTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".KherjTaroActivity"></activity>
+        <activity
+            android:name=".SetupActivity"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="htary.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="2" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="com.hiddenbean.android.khbarmdinty" />
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FrontActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

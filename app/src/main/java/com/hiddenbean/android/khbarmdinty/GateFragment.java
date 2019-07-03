@@ -21,12 +21,11 @@ public class GateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_gate, container, false);
 
-
         ((FrontActivity)getActivity()).setTitle(null);
         ((FrontActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
-        loginButton = (Button) view.findViewById(R.id.singin);
-        singupButton = (Button) view.findViewById(R.id.singup);
+        loginButton = view.findViewById(R.id.singin);
+        singupButton = view.findViewById(R.id.singup);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Khbar Mdinty</string>
+    <string name="app_name">Htary</string>
     <string name="argument">en vous inscrivant, vous acceptez <font color="000000"><u>nos conditions \n d’utilisation</u></font> et notre <font color="000000"><u>politique de confidentialité</u></font>.</string>
     <string name="login_title">Authentification</string>
     <string name="singup_title">Inscription</string>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Introduction1Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/main_picture"
+            android:layout_width="350dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="88dp"
+            android:src="@drawable/ic_undraw_apartment_rent_o0ut"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/main_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="KHEREJ TARO!"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/worksans_bold"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/headline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="un service Derichebourg"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start"
+            app:layout_constraintTop_toBottomOf="@+id/text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="commancer !"
+            android:textAllCaps="false"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/later"
+            app:layout_constraintTop_toBottomOf="@+id/start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:backgroundTint="@android:color/white"
+            app:rippleColor="@color/colorAccentLight"
+            android:textColor="@color/colorAccent"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="plus tard"
+            android:drawableEnd="@drawable/ic_chevron_right_black_24dp"
+            app:iconTint="@color/colorAccent"
+            android:textAllCaps="false"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

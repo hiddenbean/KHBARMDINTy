@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.hiddenbean.android.khbarmdinty.models.TextPost;
 
@@ -23,13 +24,18 @@ import androidx.recyclerview.widget.RecyclerView;
 public class FeedFragment extends Fragment {
 
     Button nextButton;
+    ImageView loading_content;
+
     private PostAdapter adapter;
     private ArrayList<TextPost> textPostArrayList;
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_feed, container, false);
+
+        loading_content = view.findViewById(R.id.loading_content);
 
         RecyclerView  recyclerView = view.findViewById(R.id.feed_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

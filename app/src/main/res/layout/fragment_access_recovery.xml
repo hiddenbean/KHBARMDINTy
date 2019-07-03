@@ -30,7 +30,7 @@
             android:id="@+id/login_text"
             app:layout_constraintTop_toBottomOf="@id/headline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/facebook_button"
+            app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/password_recovery_text"/>
@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@id/login_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email, Nom d'utilisateur ou téléphone"
+            android:hint="Saisissez voter Email"
             style="@style/BoxedTextInput">
 
             <com.google.android.material.textfield.TextInputEditText
