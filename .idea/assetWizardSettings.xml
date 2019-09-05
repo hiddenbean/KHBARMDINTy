@@ -157,7 +157,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/content/ic_add_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/Applications/Android%20Studio.app/Contents/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_account_circle_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -167,13 +167,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="assetSourceType" value="FILE" />
-                            <entry key="color" value="ffffff" />
-                            <entry key="height" value="762" />
-                            <entry key="outputName" value="ic_undraw_apartment_rent_o0ut" />
+                            <entry key="outputName" value="ic_account_circle_black_24dp" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/undraw_apartment_rent_o0ut.svg" />
-                            <entry key="width" value="1007" />
+                            <entry key="sourceFile" value="$USER_HOME$/Downloads/logo_black.svg" />
                           </map>
                         </option>
                       </PersistentState>

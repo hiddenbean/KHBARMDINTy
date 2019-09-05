@@ -5,6 +5,7 @@ import java.util.Date;
 public class TextPost {
 
     private int id;
+    private boolean mediaPost;
     private String post;
     private int user_id;
     private Date created_at;
@@ -14,8 +15,9 @@ public class TextPost {
 
     }
 
-    public TextPost(int id, String post, int user_id, Date created_at, Date updated_at) {
+    public TextPost(int id,boolean mediaPost, String post, int user_id, Date created_at, Date updated_at) {
         this.id = id;
+        this.mediaPost = mediaPost;
         this.post = post;
         this.user_id = user_id;
         this.created_at = created_at;
@@ -52,5 +54,13 @@ public class TextPost {
 
     public void setUpdate_at(Date update_at) {
         this.updated_at = update_at;
+    }
+
+    public boolean isMediaPost() {
+        return mediaPost;
+    }
+
+    public void setMediaPost(boolean mediaPost) {
+        this.mediaPost = mediaPost;
     }
 }

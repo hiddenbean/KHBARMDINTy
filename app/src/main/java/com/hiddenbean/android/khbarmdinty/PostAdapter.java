@@ -2,12 +2,16 @@ package com.hiddenbean.android.khbarmdinty;
 
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,22 +45,6 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostHolder>{
     public void onBindViewHolder(@NonNull final PostHolder holder, int position) {
         TextPost textPost = textPosts.get(position);
         holder.setDetails(textPost);
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "Clicked", Toast.LENGTH_LONG)
-                        .show();
-            }
-        });
-
-        holder.up_vote.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(context, "up voted", Toast.LENGTH_SHORT)
-                        .show();
-            }
-        });
     }
 
     @Override
@@ -68,7 +56,10 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostHolder>{
 
         private TextView user_name, location_text, post_text, date_text;
         private MaterialButton up_vote;
-        private ImageButton down_vote;
+        private ImageButton down_vote, optionsButton;
+        private ImageView imageView;
+        private boolean isUpVoted = false;
+        private boolean isDownVoted = false;
 
         public PostHolder(View itemView) {
             super(itemView);
@@ -78,16 +69,71 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.PostHolder>{
             post_text = itemView.findViewById(R.id.post_text);
             up_vote = itemView.findViewById(R.id.up_vote);
             down_vote = itemView.findViewById(R.id.down_vote);
+            imageView = itemView.findViewById(R.id.post_media);
+            optionsButton = itemView.findViewById(R.id.options_button);
         }
 
         public void setDetails(TextPost textPost) {
-            user_name.setText(String.valueOf(textPost.getUser_id()));
+            user_name.setText("Hicham Msaaf");
             location_text.setText("location,");
 
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MMMM YYYY");
             date_text.setText(simpleDateFormat.format(textPost.getCreated_at()));
 
-            post_text.setText(textPost.getPost());
+            post_text.setText(Html.fromHtml(textPost.getPost()));
+
+            if(!textPost.isMediaPost()) {
+                imageView.setVisibility(View.GONE);
+                post_text.setTextSize(26);
+            }
+            optionsButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showMenu(v);
+                }
+            });
+
+
+            up_vote.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!isUpVoted) {
+                        up_vote.setTextColor(context.getColor(R.color.colorPrimary));
+                        up_vote.setIconTint(context.getColorStateList(R.color.colorPrimary));
+                        isUpVoted = true;
+                        down_vote.setImageTintList(context.getColorStateList(R.color.placeholderText));
+                        isDownVoted = false;
+                    }
+                    else {
+                        up_vote.setTextColor(context.getColor(R.color.placeholderText));
+                        up_vote.setIconTint(context.getColorStateList(R.color.placeholderText));
+                        isUpVoted = false;
+                    }
+                }
+            });
+
+            down_vote.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!isDownVoted) {
+                        down_vote.setImageTintList(context.getColorStateList(R.color.colorPrimary));
+                        isDownVoted = true;
+                        up_vote.setTextColor(context.getColor(R.color.placeholderText));
+                        up_vote.setIconTint(context.getColorStateList(R.color.placeholderText));
+                        isUpVoted = false;
+                    }
+                    else {
+                        down_vote.setImageTintList(context.getColorStateList(R.color.placeholderText));
+                        isDownVoted = false;
+                    }
+                }
+            });
+        }
+
+        public void showMenu(View anchor) {
+            PopupMenu popup = new PopupMenu(context , anchor);
+            popup.getMenuInflater().inflate(R.menu.options_menu, popup.getMenu());
+            popup.show();
         }
 
     }

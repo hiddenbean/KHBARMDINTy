@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitServiceProvider {
 
-    private static final String BASE_URL = "http://192.168.1.105/api/";
+    private static final String BASE_URL = "http://192.168.1.9/api/";
 
     public static Gson gson = new GsonBuilder()
                                     .setDateFormat("yyyy-MM-dd HH:mm:ss")

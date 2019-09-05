@@ -2,11 +2,30 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/navigation_feed"
+        android:state_checked="true"
+        android:title="Feed"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/navigation_trand"
+        android:title="Tendance"
+        android:icon="@drawable/ic_trending"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/navigation_follow"
+        android:title="suivi"
+        android:icon="@drawable/ic_star_white_24dp"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/navigation_notifications"
+        android:state_checked="true"
         android:title="Notifications"
         android:icon="@drawable/ic_notifications_black_24dp"
         app:showAsAction="always"/>
     <item
-        android:title="Searsh"
-        android:icon="@drawable/ic_search_white_24dp"
+        android:id="@+id/navigation_menu"
+        android:title="menu"
+        android:icon="@drawable/ic_menu_white_24dp"
         app:showAsAction="always"/>
 </menu>
