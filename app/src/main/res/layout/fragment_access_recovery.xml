@@ -41,7 +41,7 @@
             app:layout_constraintTop_toBottomOf="@id/login_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Saisissez voter Email"
+            android:hint="@string/type_mail"
             style="@style/BoxedTextInput">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -60,7 +60,7 @@
             android:paddingBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="récupérer"
+            android:text="@string/recover"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

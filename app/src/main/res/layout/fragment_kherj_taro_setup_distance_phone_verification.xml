@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="VALIDATION TÉLÉPHONE"
+            android:text="@string/phone_validation"
             android:textSize="20sp"
             android:textColor="@android:color/black"
             android:fontFamily="@font/worksans_bold"
@@ -33,7 +33,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:text="Un SMS contenant un code de validation à six chiffres a été envoyé au ••••-••••60"/>
+            android:text="@string/sms_sent_message"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/code_layout"
@@ -41,7 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:hint="Saisissez le code"
+            android:hint="@string/type_code"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             app:layout_constraintTop_toBottomOf="@id/text"
@@ -49,13 +49,11 @@
             app:layout_constraintRight_toRightOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:focusedByDefault="true"
                 android:id="@+id/code"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"
-                android:lines="1"
-                android:defaultFocusHighlightEnabled="true"/>
+                android:lines="1" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -71,7 +69,7 @@
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="valider"
+            android:text="@string/validate"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/code_layout" />
@@ -82,12 +80,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:backgroundTint="@android:color/white"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="modifier téléphone"
+            android:text="@string/modify_phone"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent"
             app:layout_constraintStart_toStartOf="parent"

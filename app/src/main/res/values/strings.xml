@@ -1,15 +1,86 @@
 <resources>
     <string name="app_name">Htary</string>
-    <string name="argument">en vous inscrivant, vous acceptez <font color="000000"><u>nos conditions \n d’utilisation</u></font> et notre <font color="000000"><u>politique de confidentialité</u></font>.</string>
+    <string name="argument">En vous inscrivant, vous acceptez <font color="000000"><u>nos conditions \n d’utilisation</u></font> et notre <font color="000000"><u>politique de confidentialité</u></font>.</string>
     <string name="login_title">Authentification</string>
     <string name="singup_title">Inscription</string>
     <string name="password_recovery_title">Problème d’authentication</string>
     <string name="password_recovery_headline">Récupération de compte </string>
-    <string name="password_recovery_text">Vous pouvez récupérer votre compte Khbar Mdinty par entrer votre Email, Nom d’utilisateur ou numero de téléphone.</string>
+    <string name="password_recovery_text">Vous pouvez récupérer votre compte Htary en entrant votre Email, Nom d’utilisateur ou votre numéro de téléphone.</string>
     <string name="welcome_1_headline">Que se passe-t-il autour de vous ?</string>
     <string name="welcome_1_text">Soyez le premier à le savoir !</string>
-    <string name="welcome_2_headline">C’est vous</string>
+    <string name="welcome_2_headline">C’est vous qui choisissez</string>
     <string name="welcome_2_text">Vous contrôlez votre contenu</string>
-    <string name="home_title">Htary</string>
     <string name="password_wrong"><h6 color="000000">Wrong password</h6></string>
+    <string name="logo_content_description">Htary logo</string>
+    <string name="user_name">Nom d’utilisateur</string>
+    <string name="location">Location,</string>
+    <string name="date">date</string>
+    <string name="three_points_menu">Three points menu</string>
+    <string name="publication_photo">Publication photo</string>
+    <string name="publication_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br></br>do eiusmod tempor incididunt ut labore et dolore magna<br></br> aliqua. Ut enim ad minim veniam, quis nostrud exercitation<br></br> ullamco laboris nisi </string>
+    <string name="up_number">156</string>
+    <string name="down_arrow">Dislike arrow</string>
+    <string name="up_arrow">Like arrow</string>
+    <string name="comment_number">54</string>
+    <string name="type_mail">Saisissez voter Email</string>
+    <string name="recover">récupérer</string>
+    <string name="connect">Se connecter</string>
+    <string name="register">S’inscrire</string>
+    <string name="htary_big_logo">Big blue Htary logo</string>
+    <string name="social_media_interraction_image">Social media interraction (likes thumbs up) image</string>
+    <string name="next">Suivant</string>
+    <string name="opinion_comment_image">Comments and opinion image</string>
+    <string name="start">Commencer</string>
+    <string name="kharjo_taro_text">\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="kharjo_text">KHEREJ TARO NOTIFICATIONS</string>
+    <string name="trash_notification">Derichebourg avec une partenariat avec Htary  vous offre un service pour vous notificer l’horaire de passage de camion de ramassage d’ordure en temps réel. \n\nLe service utilise votre position pour envoyer des push notification a traver Htary ou avec l'option sms</string>
+    <string name="activate">Activer</string>
+    <string name="more_info">En savoir plus</string>
+    <string name="skip_details">Je m’en passe</string>
+    <string name="almost_done">PRESQUE FINI</string>
+    <string name="specify_trash_notification_time">Veuillez Spécifier le delai de notification avant l’arrivée du camion</string>
+    <string name="notify_me_before">M’envoyer une notification avant</string>
+    <string name="time_margin">5</string>
+    <string name="minutes">Minutes</string>
+    <string name="send_sms">Envoyez moi un sms si je suis déconnecté</string>
+    <string name="save">Enregister</string>
+    <string name="last_step">DERNIER PAS</string>
+    <string name="phone_verification">Htary va vous envoyer un SMS pour vérifier votre numéro de téléphone</string>
+    <string name="country_prefix">Préfixe</string>
+    <string name="prefix_number">+212</string>
+    <string name="phone_number">Numéro de téléphone</string>
+    <string name="verify">Vérifier</string>
+    <string name="phone_validation">VALIDATION DU TÉLÉPHONE</string>
+    <string name="sms_sent_message">Un SMS contenant un code de validation de six chiffres a été envoyé au ••••-••••60</string>
+    <string name="type_code">Saisissez le code</string>
+    <string name="validate">Valider</string>
+    <string name="modify_phone">Modifier téléphone</string>
+    <string name="trash_out_picture">Get the trash out picture</string>
+    <string name="trash_out">KHEREJ TARO!</string>
+    <string name="derichebourg_service">Un service Derichebourg</string>
+    <string name="later">plus tard</string>
+    <string name="app_description_text">Connectez-vous à votre compte Htary pour recevoir les dernieres KHBARAT</string>
+    <string name="connect_with_facebook">Se connecter avec facebook</string>
+    <string name="or">ou</string>
+    <string name="email">Email</string>
+    <string name="password">Mot de passe</string>
+    <string name="login">Se connecter</string>
+    <string name="problem">Un problème ?</string>
+    <string name="locatisation_image">Localisation image</string>
+    <string name="choose_location">Choisissez votre position pour commencer à utiliser Htary</string>
+    <string name="use_current_location">Utiliser ma localisation</string>
+    <string name="choose_manually">Choisir manuellement</string>
+    <string name="choosing_location">Choisissez une position</string>
+    <string name="desc">Descending order</string>
+    <string name="search">Search</string>
+    <string name="no_connection_logo">Lost connection logo </string>
+    <string name="sign_up_facebook">S’inscrire avec facebook</string>
+    <string name="first_name">Nom</string>
+    <string name="last_name">Prénom</string>
+    <string name="email_or_phone">Email ou téléphone</string>
+    <string name="image_checked">Image location checked</string>
 </resources>

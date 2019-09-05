@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="s'inscrire avec facebook"
+            android:text="@string/sign_up_facebook"
             android:textAllCaps="false"
             android:backgroundTint="@color/blueFacebook"
             android:layout_width="match_parent"
@@ -36,13 +36,13 @@
             android:id="@+id/text_separator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Ou"
+            android:text="@string/or"
             app:layout_constraintTop_toBottomOf="@id/facebook_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
         <LinearLayout
-
+            android:baselineAligned="false"
             android:id="@+id/name_layout"
             app:layout_constraintTop_toBottomOf="@id/text_separator"
             android:layout_marginTop="10dp"
@@ -53,7 +53,7 @@
                 android:id="@+id/first_name__layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nom"
+                android:hint="@string/first_name"
                 android:layout_weight="1"
                 style="@style/BoxedTextInput"
                 android:layout_marginEnd="5dp">
@@ -71,7 +71,7 @@
                 android:id="@+id/last_name_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Prénom"
+                android:hint="@string/last_name"
                 android:layout_weight="1"
                 style="@style/BoxedTextInput"
                 android:layout_marginStart="5dp">
@@ -92,7 +92,7 @@
             app:layout_constraintTop_toBottomOf="@id/name_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email ou téléphone"
+            android:hint="@string/email_or_phone"
             style="@style/BoxedTextInput"
             app:passwordToggleTint="@android:color/darker_gray">
 
@@ -111,7 +111,7 @@
             app:layout_constraintTop_toBottomOf="@id/login_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Mot de passe"
+            android:hint="@string/password"
             style="@style/BoxedTextInput"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@android:color/darker_gray">
@@ -131,7 +131,7 @@
             android:paddingBottom="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="s'inscrire"
+            android:text="@string/register"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/password_layout" />

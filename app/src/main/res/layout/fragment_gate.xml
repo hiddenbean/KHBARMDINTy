@@ -11,6 +11,7 @@
         android:layout_height="match_parent">
 
         <ImageView
+            android:contentDescription="@string/htary_big_logo"
             android:id="@+id/colord_logo"
             android:layout_width="212dp"
             android:layout_height="75dp"
@@ -27,7 +28,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="68dp"
-            android:text="se connecter"
+            android:text="@string/connect"
             android:textAllCaps="false"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
@@ -46,7 +47,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:gravity="center"
-            android:text="s'inscrire"
+            android:text="@string/register"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

@@ -15,7 +15,7 @@
                 android:id="@+id/login_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Connecter à votre compte khbar mdinty pour avoir les derniers KHBART"
+                android:text="@string/app_description_text"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +31,7 @@
                 android:backgroundTint="@color/blueFacebook"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="se connecter avec facebook"
+                android:text="@string/connect_with_facebook"
                 android:textAllCaps="false"
                 app:icon="@drawable/ic_iconmonstr_facebook_white"
                 app:iconGravity="textStart"
@@ -48,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Ou"
+                android:text="@string/or"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/facebook_button" />
@@ -59,7 +59,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Email"
+                android:hint="@string/email"
                 app:layout_constraintTop_toBottomOf="@id/text_separator"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp">
@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:hint="Mot de passe"
+                android:hint="@string/password"
                 app:layout_constraintTop_toBottomOf="@id/login_layout"
                 app:passwordToggleEnabled="true"
                 app:passwordToggleTint="@android:color/darker_gray"
@@ -102,12 +102,12 @@
                 android:layout_marginTop="15dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="se connecter"
+                android:text="@string/login"
                 android:textAllCaps="false"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/password_layout"
                 style="@style/MyThemeMaterialButton"
-                android:layout_marginRight="20dp"/>
+                android:layout_marginEnd="20dp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/access_recovery"
@@ -119,13 +119,13 @@
                 android:gravity="center"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:text="problème ?"
+                android:text="@string/problem"
                 android:textAllCaps="false"
                 android:textColor="@color/colorAccent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/password_layout"
                 app:rippleColor="@color/colorAccentLight"
-                android:layout_marginLeft="5dp"/>
+                android:layout_marginStart="5dp"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
